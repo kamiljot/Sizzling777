@@ -1,0 +1,3 @@
+C:/Users/kjatkows/source/repos/Sizzling777-master/CMakeFiles/Sizzling777.dir
+C:/Users/kjatkows/source/repos/Sizzling777-master/CMakeFiles/ALL_BUILD.dir
+C:/Users/kjatkows/source/repos/Sizzling777-master/CMakeFiles/ZERO_CHECK.dir
