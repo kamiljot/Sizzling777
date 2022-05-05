@@ -17,11 +17,9 @@ class reel
 public:
 	reel() {
 		srand((unsigned)time(NULL));
-		reel_.reserve(55);
 	};
 
 	void fill_the_reel() {
-		vector_of_symbols.reserve(55);
 		for (int i = 0; i < 10; i++) {
 			vector_of_symbols.push_back(new cherry);
 			vector_of_symbols.push_back(new lemon);
@@ -37,14 +35,12 @@ public:
 		}
 		vector_of_symbols.push_back(new seven);
 		vector_of_symbols.push_back(new seven);
-
+		
 		for (int i = 54; i > 0; i--) {
 			int rnd = rand() % i;
-			reel_.push_back(vector_of_symbols[rnd]);
+			reel_.push_back(vector_of_symbols.at(rnd));
 			vector_of_symbols.erase(vector_of_symbols.begin() + rnd);
 		}
-		reel_.push_back(vector_of_symbols[0]);
-		vector_of_symbols.erase(vector_of_symbols.begin());
 	};
 
 	void print_the_reel() {
@@ -58,7 +54,8 @@ public:
 	}
 
 	int roll_the_reel() {
-		return rand() % 55;
+		int i = rand() % 52 + 1;
+		return i;
 	};
 
 	char get_symbol(int i) {
